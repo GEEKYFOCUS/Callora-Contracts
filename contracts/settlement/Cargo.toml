@@ -2,17 +2,15 @@
 name = "callora-settlement"
 version = "0.1.0"
 edition = "2021"
-publish = false
 
 [lib]
-crate-type = ["cdylib", "rlib"]
-doctest = false
+crate-type = ["cdylib", "lib"]
 
 [dependencies]
-soroban-sdk = { workspace = true }
+soroban-sdk = "22.0.0"
 
 [dev-dependencies]
-soroban-sdk = { workspace = true, features = ["testutils"] }
+soroban-sdk = { version = "22.0.0", features = ["testutils"] }
 
 [features]
 testutils = ["soroban-sdk/testutils"]
